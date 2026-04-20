@@ -55,3 +55,6 @@ The user of the class never sees it.
 External.
 User has to create this array just to call the method.
 User manages memory for the algorithm: Poor "encapsulation".
+
+<hr>
+https://metrocs.github.io/NetworkFlow/

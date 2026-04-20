@@ -10,7 +10,7 @@ import java.util.Queue;
  */
 public class MaxFlowExample {
     /** A simple container to hold the results of a Max Flow calculation. */
-    static record MaxFlowResult(int maxFlow, int[][] residualGraph) { }
+    public static record MaxFlowResult(int maxFlow, int[][] residualGraph) { }
 
     /**
      * Determine if there is an augmenting path from the source to the sink
@@ -62,7 +62,7 @@ public class MaxFlowExample {
      * @param sink   index of the ending node (destination) for the flow.
      * @return       The value of the maximum flow and a residual graph.
      */
-    static MaxFlowResult edmondsKarp(int[][] graph, int source, int sink) {
+    public static MaxFlowResult edmondsKarp(int[][] graph, int source, int sink) {
         int u, v;
         // The residual graph initially matches the original graph capacities.
         int[][] residualGraph = new int[graph.length][graph.length];
@@ -124,9 +124,9 @@ public class MaxFlowExample {
      * @param residualGraph The final residual graph after max flow has been calculated.
      * @return              A formatted string representing the flow/capacity for every edge.
      */
-    static String getFlowDetails(int[][] graph, int[][] residualGraph) {
+    public static String getFlowDetails(int[][] graph, int[][] residualGraph) {
         StringBuilder sb = new StringBuilder();
-        sb.append("\nEdge -> Flow / Capacity\n");
+        sb.append("\nEdge_# -> Flow / Capacity\n");
         sb.append("-----------------------\n");
         for (int u = 0; u < graph.length; u++) {
             for (int v = 0; v < graph.length; v++) {

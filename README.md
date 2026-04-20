@@ -1,11 +1,15 @@
 # Network Flow Example
 
 This project provides a simple implementation and example
-of fidning the maximum flow of a network.
+of finding the maximum flow of a network.
 
 This implements the Edmonds-Karp algorithm for Ford-Fulkerson
 using breadth-first search and an adjacency matrix representation
 of the network.
+
+Utility class: MaxFlowExample
+
+JUnit 5 Test class: MaxFlowExampleTest
 
 ## Software Development Observation
 
